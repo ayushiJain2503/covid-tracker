@@ -1,0 +1,25 @@
+<div class="chart-container">  
+    <form [formGroup]="covidForm">  
+        <div class="form-group form-div row">  
+        <span class="form-inputs col-md-12 col-sm-24">
+            <label for="countries">Countries:</label>  
+            <select formControlName="countries" class="form-control" (change)="getCountryStatistics()">  
+                <option selected>All</option>  
+                <option *ngFor="let country of countryList">{{country}}</option>  
+            </select>  
+        </span>
+
+        <span class="form-inputs col-md-12 col-sm-24">
+            <label for="day">Day:</label>  
+            <input formControlName="day" class="form-control" type="date" (change)="getCountryHistoricalStatistics()" />
+        </span>
+        </div>  
+    </form>  
+
+    <div class="row">
+        <div>
+            <app-statictics-chart [countries]="countryList" [covidData]="covidData" [selectedCountry]="selectedCountry"></app-statictics-chart>
+            <app-history-chart [covidHistoricalData]="covidHitoricalData" [selectedCountry]="selectedCountry"></app-history-chart>
+        </div>
+    </div>
+</div>  

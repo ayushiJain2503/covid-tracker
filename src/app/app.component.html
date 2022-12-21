@@ -1,0 +1,11 @@
+<div class="container">
+    <h1 class="page-heading">COVID-19 Tracker</h1>
+    <div>
+        <input type="text" class="my-search-box" (keydown.enter)="$event.preventDefault()" placeholder="Search Location" type="text" #search />
+    </div>
+    <div style="width: 100%">
+        <google-map #myGoogleMap height="500px" width="100%" [zoom]="zoom" [center]="center"[options]="options"></google-map>
+    </div>
+    <app-tracker-ui (emitSelectedCOuntry)="updateMapOnCountryChange($event)"></app-tracker-ui>
+</div>
+

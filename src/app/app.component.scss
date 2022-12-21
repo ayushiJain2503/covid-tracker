@@ -1,0 +1,20 @@
+.page-heading{
+    text-align: center;
+}
+.container{
+    padding: 0 50px;
+}
+.my-search-box {
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #212529;
+    width: 60%;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    z-index: 10;
+    position: absolute; 
+    top: 95px;
+    left: 20%;
+  }
