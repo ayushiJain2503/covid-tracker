@@ -21,7 +21,7 @@ export class InterceptorService implements HttpInterceptor {
     }
 
     if(!req.headers.has('X-RapidAPI-Key')){
-      headers['X-RapidAPI-Key']='7f98368bebmsh3450aa136d0c4b0p11fa77jsn0f976e6bc78d';
+      headers['X-RapidAPI-Key']='your api key will go here';
     }
 
     const reqWithHeaders = req.clone({
